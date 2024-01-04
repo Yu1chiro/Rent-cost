@@ -22,7 +22,7 @@
 .stext{
   font-size: 1.8rem;
   font-family: var(--LOGO-FONT);
-  color: var(--theme-color1);
+  color:#0d6efd;
   font-weight: normal;
 
 }
@@ -91,7 +91,7 @@ padding-inline: 20px;
 .nav-tabs .nav-link:hover {
 border-radius: 25px;
 color: white;
-background-color:var(--theme-color1);
+background-color:#0d6efd;
 display: block;
 padding-top:11px;
 padding-inline: 20px;
@@ -104,7 +104,7 @@ border-radius: 25px;
 color: white;
 padding-top:11px;
 padding-inline: 20px;
-background-color:var(--theme-color1);
+background-color:#0d6efd;
 }
 .tabdisign{
 border: 1px solid #000;
@@ -167,7 +167,7 @@ display: none;
   color: black;
 }
 .offcanvas-body{
-  background-color:var(--theme-color1);
+  background-color:#0d6efd;
   
 } 
 #offcanvasRight{
