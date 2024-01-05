@@ -110,7 +110,9 @@
         </label>
       </div>
       <a href="#" class="add-to-card text-center mb-4" onclick="checkout()">Check Out</a>
-      <span class="text-dark" id="span" style="display:none;">Silahkan Unduh Metode Pembayaran</span>
+      <div class="container mt-4">
+        <span class="text-dark mb-4" id="span" style="display:none;">Silahkan Unduh Metode Pembayaran</span>
+      </div>
       <div class="container mt-4">
         <a href="#" class="add-to-card text-center mb-4" onclick="downloadImage()" id="downloadButton" style="display:none;">Unduh</a>
       </div>
@@ -119,9 +121,23 @@
         <a href="#" class="add-to-card text-center mb-4" onclick="verify()" id="verify" style="display:none;">Verifikasi Pembayaran</a>
       </div>
        <script>
-        function verify () {
-          // Mengarahkan ke alamat email setelah unduhan selesai
-         window.location.href = 'mailto:ryuukiharukaze25@gmail.com?subject=Lampiran+Bukti+Pembayaran&body=Silahkan+Lampirkan+Bukti+Pembayaran+:';
+        function verify(){
+          var subject = 'Lampiran Bukti Pembayaran';
+        var body = 'Silahkan Lampirkan Bukti Pembayaran:';
+
+        // Mengkodekan teks untuk digunakan dalam URL
+          var encodedSubject = encodeURIComponent(subject);
+          var encodedBody = encodeURIComponent(body);
+
+          // Membentuk URL dengan teks yang sudah dikodekan
+          var mailtoURL = 'mailto:ryuukiharukaze25@gmail.com?subject=' + encodedSubject + '&body=' + encodedBody;
+
+          // Mengganti '+' dengan spasi biasa
+          mailtoURL = mailtoURL.replace(/\+/g, ' ');
+
+          // Mengarahkan ke URL yang sudah diperbarui
+          window.location.href = mailtoURL;
+
         }
        </script>
 
