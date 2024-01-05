@@ -12,6 +12,41 @@
     <!-- ================iconify=================== -->
     <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
     <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+    <script>
+      function downloadImage() {
+          // Ganti 'hu1.jpeg' dengan nama file gambar yang ingin Anda unduh
+          var imageName = 'pembayaran.jpeg';
+          
+          // Ganti 'rent-img/' dengan path relatif dari direktori kode ke gambar tersebut
+          var imageUrl = 'rent-img/' + imageName;
+          
+          // Membuat elemen <a> baru dengan atribut href dan download
+          var link = document.createElement('a');
+          link.href = imageUrl;
+          link.download = imageName;
+  
+          // Menambahkan elemen ke dalam dokumen dan mengkliknya secara otomatis
+          document.body.appendChild(link);
+          link.click();
+
+          // Menampilkan SweetAlert setelah formulir dikosongkan
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "Berhasil di Download",
+          showConfirmButton: false,
+          timer: 1000
+        });
+  
+          // Menghapus elemen setelah proses unduhan selesai
+          document.body.removeChild(link);
+          document.getElementById("verify").style.display = "inline";
+          document.getElementById("downloadButton").style.display = "none";
+          document.getElementById("span").style.display = "none";
+          document.getElementById("span2").style.display = "inline";
+
+      }
+      </script>
 
   </head>
   <body>
@@ -19,7 +54,7 @@
     <div class="row  gy-3 mb-4 ">
       <div class=" col-md-6 col-lg-4">
       <div class=" left-cart-det ">
-      <img src="rent-img/hu1.jpeg" class="card-img-top main-img " alt="..."  id="mainimg">
+      <img src="rent-img/hu2.jpeg" class="card-img-top main-img " alt="..."  id="mainimg">
       </div>
       <div class="row gx-2 mt-2 modlsho">
       <div class="col-3 ">
@@ -36,6 +71,7 @@
       </div>
          </div>
    </div>
+   <!-- stop disini  -->
    <div class="col-md-6 col-lg-6">
     <div class="right-cart-det">
       <h5>Hutao Genshin Impact</h5>
@@ -50,7 +86,7 @@
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">No Telepon</label>
-        <input type="number" class="form-control" id="noTelepon" placeholder="your phone number">
+        <input type="text" class="form-control" id="noTelepon" placeholder="your phone number">
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Nama Costum</label>
@@ -74,6 +110,21 @@
         </label>
       </div>
       <a href="#" class="add-to-card text-center mb-4" onclick="checkout()">Check Out</a>
+      <span class="text-dark" id="span" style="display:none;">Silahkan Unduh Metode Pembayaran</span>
+      <div class="container mt-4">
+        <a href="#" class="add-to-card text-center mb-4" onclick="downloadImage()" id="downloadButton" style="display:none;">Unduh</a>
+      </div>
+      <span class="text-dark" id="span2" style="display:none;">Silahkan Verifikasi Pembayaran</span>
+      <div class="container mt-4">
+        <a href="#" class="add-to-card text-center mb-4" onclick="verify()" id="verify" style="display:none;">Verifikasi Pembayaran</a>
+      </div>
+       <script>
+        function verify () {
+          // Mengarahkan ke alamat email setelah unduhan selesai
+         window.location.href = 'mailto:ryuukiharukaze25@gmail.com?subject=Lampiran+Bukti+Pembayaran&body=Silahkan+Lampirkan+Bukti+Pembayaran+:';
+        }
+       </script>
+
       <h6 class="pro-info pb-2 pt-3 mt-3">Product Details</h6>
       <span class="info text-dark">I'm a product detail. I'm a great place to add more information about your
         product such as sizing, material, care and cleaning instructions. This is also a great space
@@ -82,67 +133,78 @@
       </span>
     </div>
   </div>
-
-  <script>
-    function checkout() {
-      var namaLengkap = document.getElementById("namaLengkap").value;
-      var email = document.getElementById("email").value;
-      var noTelepon = document.getElementById("noTelepon").value;
-      var namaCustom = document.getElementById("namaCustom").value;
-      var atributJNT = document.getElementById("JNT").checked ? "JNT" : "";
-      var atributJNE = document.getElementById("JNE").checked ? "JNE" : "";
-      var atributLainnya = document.getElementById("atribut").value;
-  
-      var subject = "Data Pemesanan";
-      var body = "Data Pengirim:\n" +
-                 "Nama Lengkap: " + namaLengkap + "\n" +
-                 "Email: " + email + "\n" +
-                 "No Telepon: " + noTelepon + "\n" +
-                 "Nama Custom: " + namaCustom + "\n";
-  
-      if (atributJNT !== "") {
-        body += "JNT: " + atributJNT + "\n";
-      }
-  
-      if (atributJNE !== "") {
-        body += "JNE: " + atributJNE + "\n";
-      }
-  
-      body += "Atribut Tambahan: " + atributLainnya;
-  
-      var mailtoLink = "mailto:ryuukiharukaze25@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-  
-      window.location.href = mailtoLink;
-  
-      // Mengosongkan formulir dan checkbox setelah beberapa saat
-      setTimeout(function () {
-        document.getElementById("namaLengkap").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("noTelepon").value = "";
-        document.getElementById("namaCustom").value = "";
-        document.getElementById("JNT").checked = false;
-        document.getElementById("JNE").checked = false;
-        document.getElementById("atribut").value = "";
-  
-        // Menampilkan SweetAlert setelah formulir dikosongkan
-        Swal.fire({
-          position: "top-center",
-          icon: "success",
-          title: "Pesanan Berhasil Dibuat",
-          showConfirmButton: false,
-          timer: 1500
-        });
-      }, 1000); // Menunggu 1 detik sebelum mengosongkan formulir dan menampilkan SweetAlert
-    }
-  </script>
-  
-  
-  
-  
-  
-           </div>
-      </div>
+  </div>
+ </div>
       <!-- Script -->
+      <script>
+        function checkout() {
+          var namaLengkap = document.getElementById("namaLengkap").value;
+          var email = document.getElementById("email").value;
+          var noTelepon = document.getElementById("noTelepon").value;
+          var namaCustom = document.getElementById("namaCustom").value;
+          var atributJNT = document.getElementById("JNT").checked ? "JNT Express" : "";
+          var atributJNE = document.getElementById("JNE").checked ? "JNE" : "";
+          var atributLainnya = document.getElementById("atribut").value;
+      
+          // Validasi formulir
+        if (!namaLengkap || !email || !noTelepon || !namaCustom || (!atributJNT && !atributJNE)) {
+          // Jika ada satu atau lebih input yang kosong, tampilkan pesan kesalahan menggunakan SweetAlert dan hentikan fungsi
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Silahkan lengkapi formulir untuk melanjutkan!",
+          });
+          return;
+        }
+    
+      
+          var subject = "Data Pemesanan";
+          var body = "Data Pengirim:\n" +
+            "Nama Lengkap: " + namaLengkap + "\n" +
+            "Email: " + email + "\n" +
+            "No Telepon: " + noTelepon + "\n" +
+            "Nama Custom: " + namaCustom + "\n";
+      
+          if (atributJNT !== "") {
+            body += "Pengiriman Normal Rp. 30.000: " + atributJNT + "\n";
+          }
+      
+          if (atributJNE !== "") {
+            body += "Pengiriman Normal Rp. 20.000: " + atributJNE + "\n";
+          }
+      
+          if (atributLainnya.trim() !== "") {
+            body += "Atribut Tambahan: " + atributLainnya + "\n";
+          }
+      
+          var mailtoLink = "mailto:ryuukiharukaze25@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      
+          window.location.href = mailtoLink;
+      
+          // Mengosongkan formulir dan checkbox setelah beberapa saat
+          setTimeout(function () {
+            document.getElementById("namaLengkap").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("noTelepon").value = "";
+            document.getElementById("namaCustom").value = "";
+            document.getElementById("JNT").checked = false;
+            document.getElementById("JNE").checked = false;
+            document.getElementById("atribut").value = "";
+      
+            // Menampilkan SweetAlert setelah formulir dikosongkan
+            Swal.fire({
+              position: "top-center",
+              icon: "success",
+              title: "Pesanan Berhasil Dibuat",
+              showConfirmButton: false,
+              timer: 800
+            });
+          }, 800); // Menunggu 1 detik sebelum mengosongkan formulir dan menampilkan SweetAlert
+      
+          document.getElementById("downloadButton").style.display = "inline";
+          document.getElementById("span").style.display = "inline";
+        }
+      </script>
           <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="js/detail.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

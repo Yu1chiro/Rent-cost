@@ -1,0 +1,26 @@
+{
+  "name": "rentall",
+  "version": "1.0.0",
+  "description": "rental-costum",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yu1chiro/Rent-cost.git"
+  },
+  "keywords": [
+    "rent-cost"
+  ],
+  "author": "hera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yu1chiro/Rent-cost/issues"
+  },
+  "homepage": "https://github.com/Yu1chiro/Rent-cost#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
