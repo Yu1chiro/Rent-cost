@@ -8,10 +8,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./style.css">
     <!-- ================iconify=================== -->
     <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
     <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 
   </head>
   <body>
@@ -28,12 +35,14 @@
         <div class="p-2 ">
             <ul class="nav col-12 col-md-auto  justify-content-center links">
                 <li><a href="#" class="nav-link px-3 link-secondary">Home</a></li>
-                <li><a href="#" class="nav-link px-3 link-dark">About us</a></li>
+                <li><a href="#" class="nav-link px-3 link-dark" data-toggle="modal" data-target="#aboutModal">About us</a></li>
                 <li><a href="#" class="nav-link px-3 link-dark">Menu</a></li>
-                <li><a href="#" class="nav-link px-3 link-dark">Contact</a></li>
+                <li><a href="mailto:ryuukiharukaze25@gmail.com" class="nav-link px-3 link-dark">Contact</a></li>
               </ul>
         </div>
       </div>
+      <!--  -->
+        
       <div class="col-md-3  col-lg-2 col-xl-2 left">
         <div class="p-2 ">
             <button class="btn log ">Login</button>
@@ -55,9 +64,22 @@
     </div>
     <div class="offcanvas-body">
           <a href="#" class="nav-link px-3 ">Home</a>
-                <a href="#" class="nav-link px-3 link-dark">About us</a>
+                <a href="#" class="nav-link px-3 link-dark" >About us</a>
                 <a href="#" class="nav-link px-3 link-dark">Menu</a>
-                <a href="#" class="nav-link px-3 link-dark">Contact</a> 
+                <a href="mailto:ryuukiharukaze25@gmail.com" class="nav-link px-3 link-dark">Contact</a> 
+    </div>
+  </div>
+  <div class="modal" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h1 class="Text text-center">Hello👋</h1>
+          <p class="text-center" style="font: size 14px !important;
+          letter-spacing: 1px!important;
+          word-spacing: 2.5px!important; color: #000!important; font-weight: bold!important;">
+          Hello everyone welcome to my store rental costum, happy shopping all👋</p>
+        </div>
+      </div>
     </div>
   </div>
 <!--============= navbar-end======================== -->
@@ -74,10 +96,16 @@
                   <a class="nav-link active" data-toggle="tab" href="#genshin">Genshin Impact</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link " data-toggle="tab" href="#starter">Naruto</a>
+                  <a class="nav-link " data-toggle="tab" href="#naruto">Naruto</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#dessert">Spy x Family</a>
+                  <a class="nav-link" data-toggle="tab" href="#spy">Spy x Family</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#komosuba">Konosuba</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#oshi">Oshi no ko</a>
               </li>
           </ul>
 
@@ -138,83 +166,74 @@
                     
                     
                   </div>
-                  <!-- ========================== second============== -->
-                  <div class="row g-2 mt-2">
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                     <div class="  p-1">
-                      <div class="card p-1" style="width: 100%">
-                        <img src="./img-box/pizza5.png" class="card-img-top" alt="...">
+                  <!-- More tambahkan dari row g-2 -->
+                 <!-- ========================== Naruto ============== -->
 
-                      </div>
-                     </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                      <div class="  p-1 ">
-                        <div class="card" style="width: 100%">
-                          <img src="./img-box/sndwich.png" class="card-img-top spacial" alt="...">
-  
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                      <div class="  p-1">
-                        <div class="card p-1" style="width: 100%">
-                          <img src="./img-box/pizza6.png" class="card-img-top" alt="...">
-  
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                      <div class="  p-1">
-                        <div class="card" style="width: 100%">
-                          <img src="./img-box/biryani.png" class="card-img-top spacial" alt="...">
-  
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- ===== end===== -->
                 </div>
               </div>
-              <div class="tab-pane fade" id="starter">
+              <div class="tab-pane fade" id="naruto">
                 <div class="container px-4">
                   <div class="row g-2">
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
                      <div class="  p-1">
                       <div class="card" style="width: 100%">
-                        <img src="./img-box/roti.png" class="card-img-top spacial" alt="...">
-
+                        <img src="rent-img/na.jpeg" class="card-img-top spacial" alt="...">
+                        <p class="text-center p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, officia?</p>
+                        <a href="detail1.html" class="btn btn-primary mb-5 ms-4 fw-bold" type="button" style="width: 80%;">See more</a>
                       </div>
                      </div>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                      <div class="  p-1 ">
-                        <div class="card" style="width: 100%">
-                          <img src="./img-box/full plate.png" class="card-img-top spacial" alt="...">
-  
-                        </div>
+                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                     <div class="  p-1">
+                      <div class="card" style="width: 100%">
+                        <img src="rent-img/na2.jpeg" class="card-img-top spacial" alt="...">
+                        <p class="text-center p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, officia?</p>
+                        <a href="detail1.html" class="btn btn-primary mb-5 ms-4 fw-bold" type="button" style="width: 80%;">See more</a>
                       </div>
+                     </div>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                      <div class="  p-1">
-                        <div class="card" style="width: 100%">
-                          <img src="./img-box/1ab6211f526df5d920d41787907d1a05.png" class="card-img-top spacial" alt="...">
-  
-                        </div>
+                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                     <div class="  p-1">
+                      <div class="card" style="width: 100%">
+                        <img src="rent-img/kashi.jpeg" class="card-img-top spacial" alt="...">
+                        <p class="text-center p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, officia?</p>
+                        <a href="detail1.html" class="btn btn-primary mb-5 ms-4 fw-bold" type="button" style="width: 80%;">See more</a>
                       </div>
+                     </div>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                      <div class="  p-1">
-                        <div class="card" style="width: 100%">
-                          <img src="./img-box/panir.png" class="card-img-top spacial " alt="..." >
-  
-                        </div>
+                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                     <div class="  p-1">
+                      <div class="card" style="width: 100%">
+                        <img src="rent-img/Namikaze Minato - 4th Hokage.jpeg" class="card-img-top spacial" alt="...">
+                        <p class="text-center p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, officia?</p>
+                        <a href="detail1.html" class="btn btn-primary mb-5 ms-4 fw-bold" type="button" style="width: 80%;">See more</a>
                       </div>
+                     </div>
                     </div>
+                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                     <div class="  p-1">
+                      <div class="card" style="width: 100%">
+                        <img src="rent-img/SASUKE UCHIHA.jpeg" class="card-img-top spacial" alt="...">
+                        <p class="text-center p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, officia?</p>
+                        <a href="detail1.html" class="btn btn-primary mb-5 ms-4 fw-bold" type="button" style="width: 80%;">See more</a>
+                      </div>
+                     </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                     <div class="  p-1">
+                      <div class="card" style="width: 100%">
+                        <img src="rent-img/mada.jpeg" class="card-img-top spacial" alt="...">
+                        <p class="text-center p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, officia?</p>
+                        <a href="detail1.html" class="btn btn-primary mb-5 ms-4 fw-bold" type="button" style="width: 80%;">See more</a>
+                      </div>
+                     </div>
+                    </div>
+                    
+                   
                   </div>
                   <!-- ========================== second============== -->
                   <div class="row g-2 mt-2">
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
                      <div class="  p-1">
                       <div class="card p-1" style="width: 100%">
                         <img src="./img-box/bhture.png" class="card-img-top spacial" alt="...">
@@ -222,107 +241,70 @@
                       </div>
                      </div>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                      <div class="  p-1 ">
-                        <div class="card" style="width: 100%">
-                          <img src="./img-box/rice.png" class="card-img-top spacial" alt="...">
-  
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                      <div class="  p-1">
-                        <div class="card p-1" style="width: 100%">
-                          <img src="./img-box/north.png" class="card-img-top spacial" alt="...">
-  
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                      <div class="  p-1">
-                        <div class="card" style="width: 100%">
-                          <img src="./img-box/golgpe.png" class="card-img-top spacial" alt="...">
-  
-                        </div>
-                      </div>
-                    </div>
+                    
                   </div>
                   
                 </div>
               </div>
               <!-- ============================ -->
-              <div class="tab-pane fade" id="dessert">
+              <div class="tab-pane fade" id="spy">
                 <div class="container px-4">
                   <div class="row g-2">
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
                      <div class="  p-1">
                       <div class="card" style="width: 100%">
-                        <img src="./img-box/coffee.png" class="card-img-top spacial" alt="...">
-
+                        <img src="rent-img/na.jpeg" class="card-img-top spacial" alt="...">
+                        <p class="text-center p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, officia?</p>
+                        <a href="detail1.html" class="btn btn-primary mb-5 ms-4 fw-bold" type="button" style="width: 80%;">See more</a>
                       </div>
                      </div>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                      <div class="  p-1 ">
-                        <div class="card" style="width: 100%">
-                          <img src="./img-box/gulabjamun.png" class="card-img-top spacial" alt="...">
-  
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                      <div class="  p-1">
-                        <div class="card" style="width: 100%">
-                          <img src="./img-box/jlebi.png" class="card-img-top spacial" alt="...">
-  
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                      <div class="  p-1">
-                        <div class="card" style="width: 100%">
-                          <img src="./img-box/cake.png" class="card-img-top spacial " alt="..." >
-  
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- ========================== second============== -->
-                  <div class="row g-2 mt-2">
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
                      <div class="  p-1">
-                      <div class="card p-1" style="width: 100%">
-                        <img src="./img-box/sweet.png" class="card-img-top" alt="...">
-
+                      <div class="card" style="width: 100%">
+                        <img src="rent-img/na2.jpeg" class="card-img-top spacial" alt="...">
+                        <p class="text-center p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, officia?</p>
+                        <a href="detail1.html" class="btn btn-primary mb-5 ms-4 fw-bold" type="button" style="width: 80%;">See more</a>
                       </div>
                      </div>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                      <div class="  p-1 ">
-                        <div class="card" style="width: 100%">
-                          <img src="./img-box/tea.png" class="card-img-top spacial" alt="...">
-  
-                        </div>
+                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                     <div class="  p-1">
+                      <div class="card" style="width: 100%">
+                        <img src="rent-img/kashi.jpeg" class="card-img-top spacial" alt="...">
+                        <p class="text-center p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, officia?</p>
+                        <a href="detail1.html" class="btn btn-primary mb-5 ms-4 fw-bold" type="button" style="width: 80%;">See more</a>
                       </div>
+                     </div>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                      <div class="  p-1">
-                        <div class="card p-1" style="width: 100%">
-                          <img src="./img-box/ice.png" class="card-img-top" alt="...">
-  
-                        </div>
+                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                     <div class="  p-1">
+                      <div class="card" style="width: 100%">
+                        <img src="rent-img/Namikaze Minato - 4th Hokage.jpeg" class="card-img-top spacial" alt="...">
+                        <p class="text-center p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, officia?</p>
+                        <a href="detail1.html" class="btn btn-primary mb-5 ms-4 fw-bold" type="button" style="width: 80%;">See more</a>
                       </div>
+                     </div>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                      <div class="  p-1">
-                        <div class="card" style="width: 100%">
-                          <img src="./img-box/pastry.png" class="card-img-top spacial" alt="...">
-  
-                        </div>
+                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                     <div class="  p-1">
+                      <div class="card" style="width: 100%">
+                        <img src="rent-img/SASUKE UCHIHA.jpeg" class="card-img-top spacial" alt="...">
+                        <p class="text-center p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, officia?</p>
+                        <a href="detail1.html" class="btn btn-primary mb-5 ms-4 fw-bold" type="button" style="width: 80%;">See more</a>
                       </div>
+                     </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                     <div class="  p-1">
+                      <div class="card" style="width: 100%">
+                        <img src="rent-img/mada.jpeg" class="card-img-top spacial" alt="...">
+                        <p class="text-center p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, officia?</p>
+                        <a href="detail1.html" class="btn btn-primary mb-5 ms-4 fw-bold" type="button" style="width: 80%;">See more</a>
+                      </div>
+                     </div>
                     </div>
                   </div>
-                  
                 </div>
               </div>
           </div>

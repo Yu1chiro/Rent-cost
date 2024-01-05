@@ -166,13 +166,20 @@
         if (!namaLengkap || !email || !noTelepon || !namaCustom || (!atributJNT && !atributJNE)) {
           // Jika ada satu atau lebih input yang kosong, tampilkan pesan kesalahan menggunakan SweetAlert dan hentikan fungsi
           Swal.fire({
-            icon: "error",
-            title: "Oops...",
+            icon: "warning",
             text: "Silahkan lengkapi formulir untuk melanjutkan!",
           });
           return;
         }
-    
+    // Validasi jenis pengiriman
+if ((atributJNT && atributJNE) || (!atributJNT && !atributJNE)) {
+  // Jika pengguna memilih kedua jenis pengiriman atau tidak memilih sama sekali
+  Swal.fire({
+    icon: "warning",
+    text: "Pilih salah satu jenis pengiriman!",
+  });
+  return;
+}
       
           var subject = "Data Pemesanan";
           var body = "Data Pengirim:\n" +

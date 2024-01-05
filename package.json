@@ -22,5 +22,8 @@
   "homepage": "https://github.com/Yu1chiro/Rent-cost#readme",
   "devDependencies": {
     "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "sweetalert2": "^11.10.2"
   }
 }
